@@ -1,7 +1,7 @@
 baseurl = "https://blogs.spidey.host"
 defaultContentLanguage = "en"
 languageCode = "en"
-title = "Spidey blogs"
+title = "Spidey Blogs"
 
 # [services]
 # [services.disqus]
@@ -19,7 +19,7 @@ darkTheme = "forest"
 author = "Spidey"
 # description = ""
 avatar = "img/avatar.png"
-headerTitle = "Spidey blogs"
+headerTitle = "Spidey Blogs"
 # motto = ""
 
 # footerBottomText = ""
