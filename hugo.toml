@@ -1,7 +1,7 @@
 baseurl = "https://blogs.spidey.host"
 defaultContentLanguage = "en"
 languageCode = "en"
-title = "Spidey host blogs"
+title = "Spidey blogs"
 
 # [services]
 # [services.disqus]
