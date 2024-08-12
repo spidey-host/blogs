@@ -1,5 +1,5 @@
 ---
-title : How to install wordpress in cPanel 
+title  How to install wordpress in cPanel 
 date : 2024-07-12 14:00:00 +0000
 cover : cover.png
 author: Spideyhost
