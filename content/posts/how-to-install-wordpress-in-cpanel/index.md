@@ -26,7 +26,7 @@ Begin by logging into your cPanel account
 
 ### Step 2: Locate and Open the WordPress Installer
 Once logged in, scroll to the **Software** section and click on WordPress under **Site Software** or **Softaculous Apps Installer**, based on your hosting provider.
-
+![Select-wordpress](select-wordpress.png)
 
 ### Step 3: Start the Installation
 On the WordPress installer page, click the **Install Now** button.
