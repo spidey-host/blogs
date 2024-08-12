@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to install SSL certificate via cPanel | Spidey Blogs</title>
+
+    
+
+
+
+<meta name="author" content="Spideyhost" />
+<meta name="description" content="Securing your website with an SSL certificate is crucial to protect sensitive data and build trust with your visitors. If you&amp;rsquo;re using cPanel, installing an SSL certificate is a straightforward process. Follow the steps below to install an SSL certificate on your domain.
+" />
+
+
+<link rel="canonical" href="http://localhost:1313/posts/how-to-install-ssl-certificate-via-cpanel/" />
+
+
+<meta property="og:url" content="http://localhost:1313/posts/how-to-install-ssl-certificate-via-cpanel/">
+  <meta property="og:site_name" content="Spidey Blogs">
+  <meta property="og:title" content="How to install SSL certificate via cPanel">
+  <meta property="og:description" content="Securing your website with an SSL certificate is crucial to protect sensitive data and build trust with your visitors. If you’re using cPanel, installing an SSL certificate is a straightforward process. Follow the steps below to install an SSL certificate on your domain.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-13T14:00:00+00:00">
+    <meta property="article:modified_time" content="2024-07-13T14:00:00+00:00">
+    <meta property="article:tag" content="CPanel">
+    <meta property="article:tag" content="SSL Certificate">
+    <meta property="article:tag" content="Web Security">
+    <meta property="og:image" content="http://localhost:1313/posts/how-to-install-ssl-certificate-via-cpanel/cover.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/how-to-install-ssl-certificate-via-cpanel/cover.png">
+  <meta name="twitter:title" content="How to install SSL certificate via cPanel">
+  <meta name="twitter:description" content="Securing your website with an SSL certificate is crucial to protect sensitive data and build trust with your visitors. If you’re using cPanel, installing an SSL certificate is a straightforward process. Follow the steps below to install an SSL certificate on your domain.">
+
+
+
+<meta name="generator" content="Hugo 0.131.0">
+
+<link rel="stylesheet" href="/css/output.css" />
+
+<style>
+
+
+
+</style>
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  <div class="container flex justify-between px-4">
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.png" alt="Spidey Blogs" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+          Spidey Blogs
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="Search">
+    <ion-icon name="search"></ion-icon>
+    Search
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Search">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="All Categories">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="All Tags">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose dark:prose-invert" id="dream-single-post-main">
+      <header>
+        <h1>How to install SSL certificate via cPanel</h1>
+        <p class="text-sm">
+          
+            
+              Saturday, Jul 13, 2024
+            
+          
+
+          | <span>2 minutes read</span>
+
+          
+          | <span>Update at
+            
+              
+                Saturday, Jul 13, 2024
+              
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span>
+  
+    
+      Spideyhost
+    
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=How%20to%20install%20SSL%20certificate%20via%20cPanel&url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhow-to-install-ssl-certificate-via-cpanel%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhow-to-install-ssl-certificate-via-cpanel%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+
+      <p>Securing your website with an SSL certificate is crucial to protect sensitive data and build trust with your visitors. If you&rsquo;re using cPanel, installing an SSL certificate is a straightforward process. Follow the steps below to install an SSL certificate on your domain.</p>
+<h2 id="step-1-log-in-to-cpanel">Step 1: Log in to cPanel</h2>
+<p>The first step is to log in to your cPanel account. You can usually access cPanel by navigating to <code>yourdomain.com/cpanel</code> and entering your login credentials.</p>
+<h2 id="step-2-search-for-ssltls-status">Step 2: Search for SSL/TLS Status</h2>
+<p>Once logged in, use the search bar at the top of the cPanel dashboard. Type &ldquo;SSL/TLS&rdquo; and click on the &ldquo;SSL/TLS Status&rdquo; option that appears. This section allows you to manage SSL certificates for your domains.</p>
+<p><img src="ssl-tsl-status.png" alt="SSL/TSL status"></p>
+<h2 id="step-3-select-the-domain">Step 3: Select the Domain</h2>
+<p>In the SSL/TLS Status section, you&rsquo;ll see a list of your domains. Select the domain for which you want to install the SSL certificate by checking the box next to it.</p>
+<h2 id="step-4-run-autossl">Step 4: Run AutoSSL</h2>
+<p>After selecting the domain, click the &ldquo;Run AutoSSL&rdquo; button at the top of the page. cPanel will now attempt to install a free SSL certificate for the selected domain automatically.
+<img src="ssl-tsl.png" alt="SSL/TSL"></p>
+<h2 id="important-note">Important Note</h2>
+<p>Before running AutoSSL, make sure your domain is properly pointed to the server. If your domain isn&rsquo;t pointing correctly, the AutoSSL process may fail, and the SSL certificate won&rsquo;t be installed.</p>
+<hr>
+<p>Following these steps will ensure that your domain is secured with an SSL certificate. An SSL-secured website not only protects your visitors&rsquo; data but also improves your website&rsquo;s ranking in search engines.</p>
+
+      
+    </article>
+  </div>
+
+  
+
+  
+
+  <section class="max-w-[65ch] mx-auto space-y-4">
+    
+
+    
+
+    
+  </section>
+</div>
+
+
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+              <div>
+  
+  <p>© 2024 Spidey Blogs</p>
+  
+
+  
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            <div class="dream-grid">
+  
+
+  
+
+  
+  
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+
+  window.hasTwitterEmbed =  null 
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
