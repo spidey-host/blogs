@@ -2,22 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/.htaccess/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/addon-domain/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-07-12T14:00:00+00:00</lastmod>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cpanel/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/cpanel/</loc>
-    <lastmod>2024-07-12T14:00:00+00:00</lastmod>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/how-to-install-wordpress-in-cpanel/</loc>
-    <lastmod>2024-07-12T14:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/posts/how-to-add-addon-domain-in-cpanel/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/how-to-chage-php-version-in-cpanel-using-htaccess/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/php/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-07-12T14:00:00+00:00</lastmod>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-07-12T14:00:00+00:00</lastmod>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web-hosting/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/web-hosting/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/website-management/</loc>
+    <lastmod>2024-07-15T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/how-to-install-ssl-certificate-via-cpanel/</loc>
+    <lastmod>2024-07-13T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/ssl/</loc>
+    <lastmod>2024-07-13T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ssl-certificate/</loc>
+    <lastmod>2024-07-13T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/web-security/</loc>
+    <lastmod>2024-07-13T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/web-security/</loc>
+    <lastmod>2024-07-13T14:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/how-to-install-wordpress-in-cpanel/</loc>
     <lastmod>2024-07-12T14:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/tutorial/</loc>

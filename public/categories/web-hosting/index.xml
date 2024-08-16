@@ -6,8 +6,22 @@
     <description>Recent content in Web Hosting on Spidey Blogs</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 13 Jul 2024 14:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jul 2024 14:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/web-hosting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to add addon Domain in cPanel</title>
+      <link>http://localhost:1313/posts/how-to-add-addon-domain-in-cpanel/</link>
+      <pubDate>Mon, 15 Jul 2024 14:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-add-addon-domain-in-cpanel/</guid>
+      <description>&lt;p&gt;This guide will walk you through the steps to set up an addon domain in cPanel&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to change php version in cPanel using .htaccess</title>
+      <link>http://localhost:1313/posts/how-to-chage-php-version-in-cpanel-using-htaccess/</link>
+      <pubDate>Mon, 15 Jul 2024 14:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/how-to-chage-php-version-in-cpanel-using-htaccess/</guid>
+      <description>&lt;p&gt;Changing the PHP version for your website can be necessary for compatibility with different scripts or for leveraging new features. In this guide, we&amp;rsquo;ll show you how to change the PHP version using the &lt;code&gt;.htaccess&lt;/code&gt; file in cPanel.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How to install SSL certificate via cPanel</title>
       <link>http://localhost:1313/posts/how-to-install-ssl-certificate-via-cpanel/</link>

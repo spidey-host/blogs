@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to change php version in cPanel using .htaccess | Spidey Blogs</title>
+
+    
+
+
+
+<meta name="author" content="Spideyhost" />
+<meta name="description" content="Changing the PHP version for your website can be necessary for compatibility with different scripts or for leveraging new features. In this guide, we&amp;rsquo;ll show you how to change the PHP version using the .htaccess file in cPanel.
+" />
+
+
+<link rel="canonical" href="http://localhost:1313/posts/how-to-chage-php-version-in-cpanel-using-htaccess/" />
+
+
+<meta property="og:url" content="http://localhost:1313/posts/how-to-chage-php-version-in-cpanel-using-htaccess/">
+  <meta property="og:site_name" content="Spidey Blogs">
+  <meta property="og:title" content="How to change php version in cPanel using .htaccess">
+  <meta property="og:description" content="Changing the PHP version for your website can be necessary for compatibility with different scripts or for leveraging new features. In this guide, we’ll show you how to change the PHP version using the .htaccess file in cPanel.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-07-15T14:00:00+00:00">
+    <meta property="article:modified_time" content="2024-07-15T14:00:00+00:00">
+    <meta property="article:tag" content="CPanel">
+    <meta property="article:tag" content="Php">
+    <meta property="article:tag" content=".Htaccess">
+    <meta property="article:tag" content="Web Hosting">
+    <meta property="og:image" content="http://localhost:1313/posts/how-to-chage-php-version-in-cpanel-using-htaccess/cover.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/how-to-chage-php-version-in-cpanel-using-htaccess/cover.png">
+  <meta name="twitter:title" content="How to change php version in cPanel using .htaccess">
+  <meta name="twitter:description" content="Changing the PHP version for your website can be necessary for compatibility with different scripts or for leveraging new features. In this guide, we’ll show you how to change the PHP version using the .htaccess file in cPanel.">
+
+
+
+<meta name="generator" content="Hugo 0.131.0">
+
+<link rel="stylesheet" href="/css/output.css" />
+
+<style>
+
+
+
+</style>
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  <div class="container flex justify-between px-4">
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/img/avatar.png" alt="Spidey Blogs" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+          Spidey Blogs
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+
+
+
+<li>
+  <a class="group inline-flex items-center p-2 cursor-pointer" href="/search" title="Search">
+    <ion-icon name="search"></ion-icon>
+    Search
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+
+      
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/search" title="Search">
+  <ion-icon class="group-hover:text-primary-content" name="search"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="All Categories">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="All Tags">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose dark:prose-invert" id="dream-single-post-main">
+      <header>
+        <h1>How to change php version in cPanel using .htaccess</h1>
+        <p class="text-sm">
+          
+            
+              Monday, Jul 15, 2024
+            
+          
+
+          | <span>2 minutes read</span>
+
+          
+          | <span>Update at
+            
+              
+                Monday, Jul 15, 2024
+              
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span>
+  
+    
+      Spideyhost
+    
+  
+  </span>
+</div>
+
+
+          <span class="flex items-center gap-2">
+  <a class="group inline-flex items-center p-2 text-sm rounded-full cursor-pointer hover:bg-primary" href="https://twitter.com/intent/tweet?text=How%20to%20change%20php%20version%20in%20cPanel%20using%20.htaccess&url=http%3a%2f%2flocalhost%3a1313%2fposts%2fhow-to-chage-php-version-in-cpanel-using-htaccess%2f" title="Share on X">
+    <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+  </a>
+  <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="https://facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2fposts%2fhow-to-chage-php-version-in-cpanel-using-htaccess%2f" title="Share on Facebook">
+    <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+  </a>
+</span>
+
+        </div>
+      </header>
+
+      
+
+      <p>Changing the PHP version for your website can be necessary for compatibility with different scripts or for leveraging new features. In this guide, we&rsquo;ll show you how to change the PHP version using the <code>.htaccess</code> file in cPanel.</p>
+<h2 id="step-1-access-your-cpanel">Step 1: Access Your cPanel</h2>
+<p>Log in to your cPanel account. If you&rsquo;re unsure how to do this, look for the cPanel login link in the welcome email from your hosting provider.</p>
+<h2 id="step-2-open-the-file-manager">Step 2: Open the File Manager</h2>
+<ol>
+<li>Navigate to the <strong>File Manager</strong> under the <strong>Files</strong> section.</li>
+<li>In the File Manager, go to the <strong>public_html</strong> directory or the directory where your website files are located.</li>
+</ol>
+<h2 id="step-3-locate-or-create-the-htaccess-file">Step 3: Locate or Create the .htaccess File</h2>
+<ol>
+<li>Look for the <code>.htaccess</code> file in your site&rsquo;s root directory. If it doesn&rsquo;t exist, you can create one by clicking on <strong>+ File</strong> at the top left corner.</li>
+<li>Name the file <code>.htaccess</code> and make sure it&rsquo;s created in the correct directory.</li>
+</ol>
+<h2 id="step-4-edit-the-htaccess-file">Step 4: Edit the .htaccess File</h2>
+<ol>
+<li>Right-click on the <code>.htaccess</code> file and select <strong>Edit</strong>.</li>
+<li>Add the following line at the top of the file to change the PHP version:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>AddHandler application/x-httpd-php74 .php
+</span></span></code></pre></div><p>Replace 74 with your desired PHP version, such as 80 for PHP 8.0.</p>
+<h2 id="step-5-save-the-changes">Step 5: Save the Changes</h2>
+<p>After making the changes, click on Save Changes in the top right corner.</p>
+<h2 id="step-6-verify-the-php-version">Step 6: Verify the PHP Version</h2>
+<p>To confirm that the PHP version has changed, you can create a phpinfo.php file in the same directory:</p>
+<ul>
+<li>In the File Manager, click on + File and name it <code>phpinfo.php</code>.</li>
+<li>Add the following code:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">phpinfo</span>();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><ul>
+<li>Save the file and access it via your browser (e.g., yourdomain.com/phpinfo.php). The page should display the current PHP version.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Changing the PHP version via <code>.htaccess</code> is a quick way to ensure your site runs on the desired PHP version without altering the server&rsquo;s global settings. This method is particularly useful for shared hosting environments.</p>
+
+      
+    </article>
+  </div>
+
+  
+
+  
+
+  <section class="max-w-[65ch] mx-auto space-y-4">
+    
+
+    
+
+    
+  </section>
+</div>
+
+
+            <footer class="flex justify-between items-center gap-2 px-4 py-12">
+              <div>
+  
+  <p>© 2024 Spidey Blogs</p>
+  
+
+  
+  
+</div>
+
+              <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-300 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+            </footer>
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            <div class="dream-grid">
+  
+
+  
+
+  
+  
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme = "emerald"
+  window.darkTheme = "forest"
+
+  window.hasTwitterEmbed =  null 
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+<script src="/js/grid.js"></script>
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
