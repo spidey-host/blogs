@@ -3,9 +3,9 @@ defaultContentLanguage = "en"
 languageCode = "en"
 title = "Spidey Blogs"
 
-# [services]
-# [services.disqus]
-# shortname = ""
+[services]
+[services.disqus]
+shortname = ""
 # [services.googleAnalytics]
 # ID = ""
 
