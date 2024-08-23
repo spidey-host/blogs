@@ -1,6 +1,6 @@
 ---
 title : How to Deploy a Node.js Application in cPanel 
-date : 2024-07-15 14:00:00 +0000
+date : 2024-08-15 14:00:00 +0000
 cover : cover.png
 author: Spideyhost
 categories :
@@ -11,7 +11,9 @@ tags :
     - cPanel
     - Node.js
     - Deployment
+weight : 1
 ---
+![Cover image](cover.png)
 
 Step-by-step guide to deploying a Node.js application in cPanel.
 <!--more-->
