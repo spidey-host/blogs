@@ -11,7 +11,6 @@ tags :
     - cPanel
     - Node.js
     - Deployment
-weight : 1
 ---
 ![Cover image](cover.png)
 
@@ -64,6 +63,7 @@ Log in to your cPanel account using your credentials. You can typically access c
 1. After the dependencies are installed, go to the **Setup Node.js App** section again.
 2. Under **Actions**, click **Start Application**. Your Node.js application will now be running on your server.
 
+![Start Nodejs](start.png)
 ## Step 7: Test Your Application
 
 Visit the **Application URL** you configured earlier to test if your Node.js application is running correctly.
