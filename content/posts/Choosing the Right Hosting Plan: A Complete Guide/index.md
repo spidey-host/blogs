@@ -1,8 +1,8 @@
 ---
 title: "Choosing the Right Hosting Plan: A Complete Guide"
 date: 2024-09-02
-cover : cover.png
 author: Spideyhost
+cover : cover.png
 categories :
     - Web Hosting
     - Website Development
@@ -10,7 +10,8 @@ tags:
     - Web Hosting
     - Website Development
     - Spidey Host
----
+---  
+
 ![Cover image](cover.png)
 
 Choosing the right hosting plan is crucial for your site's performance, security, and scalability. This guide simplifies the process, helping you find the best fit for your needs.

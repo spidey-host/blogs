@@ -1,7 +1,7 @@
 ---
 title : How to Connect Email of cPanel to an Email Client 
 date : 2024-08-12 14:00:00 +0000
-cover : cover.png
+
 author: Spideyhost
 categories :
     - cPanel
@@ -11,7 +11,9 @@ tags :
     - cPanel
     - Email Client
     - Setup
----
+---  
+
+![Cover image](cover.png)
 
 A step-by-step guide on how to connect your cPanel email account to an email client.
 <!--more-->

@@ -1,8 +1,8 @@
 ---
 title : How to change php version in cPanel using .htaccess
 date : 2024-07-15 14:00:00 +0000
-cover : cover.png
 author: Spideyhost
+cover : cover.png
 categories :
     - Web Hosting
     - cPanel
@@ -12,6 +12,8 @@ tags :
     - .htaccess
     - Web Hosting
 ---
+
+![Cover image](cover.png)
 
 Changing the PHP version for your website can be necessary for compatibility with different scripts or for leveraging new features. In this guide, we'll show you how to change the PHP version using the `.htaccess` file in cPanel.
 

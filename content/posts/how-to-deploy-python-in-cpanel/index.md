@@ -1,8 +1,8 @@
 ---
 title : How to Deploy a python Application in cPanel 
 date : 2024-08-15 14:00:00 +0000
-cover : cover.png
 author: Spideyhost
+cover : cover.png
 categories :
     - Web Hosting
     - cPanel
@@ -13,6 +13,7 @@ tags :
     - cPanel
     - Web Hosting
 ---
+
 ![Cover image](cover.png)
 
 Learn how to deploy a Python application step-by-step, from setting up your environment to going live.

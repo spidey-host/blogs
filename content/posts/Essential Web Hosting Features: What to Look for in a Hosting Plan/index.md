@@ -1,8 +1,8 @@
 ---
 title: "Essential Web Hosting Features: What to Look for in a Hosting Plan"
 date: 2024-08-15
-cover : cover.png
 author: Spideyhost
+cover : cover.png
 categories :
     - Web Hosting
     - cPanel
@@ -11,7 +11,8 @@ tags:
     - Web Hosting 
     - Website Development 
     - Spidey Host
----
+---  
+
 ![Cover image](cover.png)
 
 Choosing the right web hosting plan is crucial for your website's performance, security, and growth. This guide highlights the essential features to consider for blogs, online stores, or large applications.

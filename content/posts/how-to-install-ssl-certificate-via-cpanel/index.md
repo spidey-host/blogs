@@ -12,6 +12,7 @@ tags :
     - SSL Certificate
     - Web Security
 ---
+![Cover image](cover.png)
 
 Securing your website with an SSL certificate is crucial to protect sensitive data and build trust with your visitors. If you're using cPanel, installing an SSL certificate is a straightforward process. Follow the steps below to install an SSL certificate on your domain.
 

@@ -11,7 +11,9 @@ tags:
     - Website Development
     - Web Design
     - Spidey Host
----
+---  
+
+![Cover image](cover.png)
 
 Learn how to build your first website from scratch with this comprehensive guide, covering everything from planning and design to launching your site.
 

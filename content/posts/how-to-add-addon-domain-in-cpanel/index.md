@@ -1,8 +1,8 @@
 ---
 title : How to add addon Domain in cPanel 
 date : 2024-07-15 14:00:00 +0000
-cover : cover.png
 author: Spideyhost
+cover : cover.png
 categories :
     - Web Hosting
     - cPanel
@@ -10,7 +10,9 @@ tags :
     - cPanel
     - Addon Domain
     - Website Management
----
+---  
+
+![cover](cover.png)
 
 This guide will walk you through the steps to set up an addon domain in cPanel
 <!--more-->
