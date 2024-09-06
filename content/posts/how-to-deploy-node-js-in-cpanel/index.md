@@ -13,10 +13,11 @@ tags :
     - Deployment
 ---  
 
-![Cover image](cover.png)
 
 Step-by-step guide to deploying a Node.js application in cPanel.
 <!--more-->
+![Cover image](cover.png)
+
 
 ## Prerequisites
 

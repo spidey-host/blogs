@@ -11,11 +11,10 @@ tags:
     - Website Development
     - Spidey Host
 ---  
-
-![Cover image](cover.png)
-
 Choosing the right hosting plan is crucial for your site's performance, security, and scalability. This guide simplifies the process, helping you find the best fit for your needs.
 <!--more-->
+![Cover image](cover.png)
+
 ## 1. Understand Your Website’s Requirements
 
 Before you start exploring hosting plans, take some time to assess your website's needs:

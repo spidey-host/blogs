@@ -13,10 +13,11 @@ tags :
     - Setup
 ---  
 
-![Cover image](cover.png)
 
 A step-by-step guide on how to connect your cPanel email account to an email client.
 <!--more-->
+
+![Cover image](cover.png)
 
 ## Introduction
 

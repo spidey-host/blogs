@@ -12,10 +12,11 @@ tags :
     - Website Management
 ---  
 
-![cover](cover.png)
 
 This guide will walk you through the steps to set up an addon domain in cPanel
 <!--more-->
+![cover](cover.png)
+
 ### Log in to Your cPanel Account
 - Open your browser and navigate to your cPanel login page.
 - Enter your username and password to access your cPanel dashboard.

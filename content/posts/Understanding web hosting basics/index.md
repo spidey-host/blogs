@@ -12,10 +12,13 @@ tags:
     - Website Development
     - Spidey Host
 ---
-![Cover image](cover.png)
 
 When starting a website, understanding web hosting is key. This guide simplifies what web hosting is, how it works, and the types available, helping you make informed choices for your online presence.
 <!--more-->
+
+![Cover image](cover.png)
+
+
 ## 1. What is Web Hosting?
 
 Web hosting is a service that allows you to publish your website or web application on the internet. When you create a website, all of its content—such as text, images, videos, and code—needs to be stored somewhere so that it can be accessed by users online. This is where web hosting comes in.

@@ -14,11 +14,12 @@ tags :
     - Web Hosting
 ---
 
-![Cover image](cover.png)
 
 Learn how to deploy a Python application step-by-step, from setting up your environment to going live.
 
 <!--more-->
+![Cover image](cover.png)
+
 Deploying a Python application on cPanel is a convenient option, especially if your web hosting provider offers cPanel as part of their services. This guide will walk you through the process from start to finish, helping you get your Python app live with minimal hassle.
 
 ## 1. Preparing Your Python Application

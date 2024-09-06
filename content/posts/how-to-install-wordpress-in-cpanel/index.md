@@ -13,6 +13,7 @@ tags :
 cPanel is a popular control panel for managing web hosting. This guide will walk you through the process of installing WordPress via cPanel.  
 
 <!--more-->
+![Cover image](cover.png)
 
 ## Prerequisites   
 Before you start, make sure you have cPanel web hosting package.  

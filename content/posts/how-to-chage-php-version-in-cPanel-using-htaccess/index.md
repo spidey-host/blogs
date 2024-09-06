@@ -13,11 +13,12 @@ tags :
     - Web Hosting
 ---
 
-![Cover image](cover.png)
 
 Changing the PHP version for your website can be necessary for compatibility with different scripts or for leveraging new features. In this guide, we'll show you how to change the PHP version using the `.htaccess` file in cPanel.
 
 <!--more-->
+![Cover image](cover.png)
+
 
 ## Step 1: Access Your cPanel
 
