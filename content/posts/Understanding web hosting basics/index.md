@@ -1,13 +1,21 @@
 ---
 title: "Understanding Web Hosting Basics"
-date: 2024-09-02
-draft: false
-description: "Learn the fundamentals of web hosting, including what it is, how it works, and the different types of hosting available for your website."
-tags: ["Web Hosting", "Website Development", "Spidey Host"]
+date: 2024-08-19
+cover : cover.png
+author: Spideyhost
+categories :
+    - Web Hosting
+    - cPanel
+    - Website Development
+tags: 
+    - Web Hosting
+    - Website Development
+    - Spidey Host
 ---
+![Cover image](cover.png)
 
-When starting a website, one of the first concepts you'll encounter is web hosting. While it may seem complicated at first, understanding the basics of web hosting is essential to getting your site online. In this guide, we'll break down what web hosting is, how it works, and the different types of hosting available so you can make informed decisions as you build and grow your online presence.
-
+When starting a website, understanding web hosting is key. This guide simplifies what web hosting is, how it works, and the types available, helping you make informed choices for your online presence.
+<!--more-->
 ## 1. What is Web Hosting?
 
 Web hosting is a service that allows you to publish your website or web application on the internet. When you create a website, all of its content—such as text, images, videos, and code—needs to be stored somewhere so that it can be accessed by users online. This is where web hosting comes in.

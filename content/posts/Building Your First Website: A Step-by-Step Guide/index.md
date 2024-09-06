@@ -1,12 +1,19 @@
 ---
-title: "Building Your First Website: A Step-by-Step Guide"
-date: 2024-09-02
-draft: false
-description: "Learn how to build your first website from scratch with this comprehensive guide, covering everything from planning and design to launching your site."
-tags: ["Website Development", "Web Design", "Spidey Host"]
+title: "Building Your First Website: A Step-by-Step     Guide"
+date: 2024-08-02
+cover : cover.png
+author: Spideyhost
+categories :
+    - Web Hosting
+    - cPanel
+    - Website Development
+tags: 
+    - Website Development
+    - Web Design
+    - Spidey Host
 ---
 
-Building your first website is an exciting journey that can open up countless opportunities, whether you're starting a personal blog, showcasing your portfolio, or launching a business. While the process might seem daunting at first, with the right approach and tools, anyone can create a professional-looking website. This step-by-step guide will walk you through the essential stages of building your first website, from planning and design to launching it online.
+Learn how to build your first website from scratch with this comprehensive guide, covering everything from planning and design to launching your site.
 
 ## 1. Define Your Website’s Purpose and Goals
 
